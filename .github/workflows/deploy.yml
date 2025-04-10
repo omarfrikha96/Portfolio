@@ -48,7 +48,7 @@ jobs:
         uses: sonarsource/sonarqube-scan-action@master
         with:
           args: >
-            -Dsonar.projectKey=omarfrikha96_portfolio
+            -Dsonar.projectKey=omarfrikha96_Portfolio
             -Dsonar.sources=.
             -Dsonar.host.url=https://sonarcloud.io
             -Dsonar.organization=omarfrikha96
