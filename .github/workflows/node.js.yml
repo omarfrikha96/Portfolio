@@ -23,6 +23,11 @@ jobs:
 
       - name: Build the app
         run: npm run build
+        
+      - name: Configure Git identity
+        run: |
+          git config user.name "omarfrikha96"
+          git config user.email "omarfrikha96@gmail.com"
 
       - name: Deploy to GitHub Pages
         run: npm run deploy
