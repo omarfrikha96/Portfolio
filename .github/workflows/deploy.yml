@@ -1,4 +1,4 @@
-name: CI/CD: Build, Secure & Deploy React App
+name: CI/CD - Build, Secure & Deploy React App
 
 on:
   push:
