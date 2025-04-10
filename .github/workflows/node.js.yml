@@ -1,12 +1,18 @@
-name: Deploy React App to GitHub Pages
+name: CI/CD: Build, Secure & Deploy React App
+
 on:
   push:
     branches:
       - main
 
 jobs:
-  deploy:
+  build-secure-deploy:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout source
@@ -15,20 +21,52 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm ci --legacy-peer-deps
 
-      - name: Build the app
+      - name: Run tests (optional)
+        run: npm run test || echo "No tests yet"
+
+      - name: Lint (optional)
+        run: npm run lint || echo "Lint issues detected"
+
+      # 🔍 Trivy: Scan for vulnerabilities
+      - name: Trivy Vulnerability Scan (Filesystem + NPM)
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: fs
+          ignore-unfixed: true
+          severity: CRITICAL,HIGH
+          format: table
+          exit-code: 0
+          vuln-type: library
+          scan-ref: .
+
+      # 🔎 SonarQube analysis
+      - name: SonarQube Scan
+        uses: sonarsource/sonarqube-scan-action@master
+        with:
+          args: >
+            -Dsonar.projectKey=omarfrikha96_portfolio
+            -Dsonar.sources=.
+            -Dsonar.host.url=https://sonarcloud.io
+            -Dsonar.organization=omarfrikha96
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      - name: 🔨 Build the app
         run: npm run build
-        
+
       - name: Configure Git identity
         run: |
-          git config user.name "omarfrikha96"
-          git config user.email "omarfrikha96@gmail.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Deploy to GitHub Pages
-        run: npm run deploy
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npx gh-pages -d build -u "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
