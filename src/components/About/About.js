@@ -4,6 +4,7 @@ import Particle from "../Particle";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import Career from "./Career";
+import Study from "./Study";
 import "aos/dist/aos.css";
 import Certifications from "./Certifications";
 
@@ -27,6 +28,7 @@ function About() {
             </h1>
             <Aboutcard />
             <Career />
+            <Study />
             <div data-aos="fade-up">
   <Certifications />
 </div>

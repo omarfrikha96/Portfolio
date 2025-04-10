@@ -7,7 +7,7 @@ function Type() {
       options={{
         strings: [
           "DevOps Engineer",
-          "Network Administrator"
+          "Network and System Administrator"
         ],
         autoStart: true,
         loop: true,

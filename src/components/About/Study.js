@@ -40,63 +40,43 @@ function Career() {
         className="text-center"
         style={{ color: secondaryColor, fontWeight: "bold", marginBottom: "40px" }}
       >
-        Career Timeline
+        Education Timeline
       </h2>
       <VerticalTimeline lineColor={primaryColor}>
         <VerticalTimelineElement
-          date="Feb 2025 - Present"
+          date="Sep 2023 - Jun 2025"
           iconStyle={{ background: primaryColor, color: "#fff" }}
           icon={<MdWork />}
           contentStyle={timelineStyle}
         >
-          <h3 style={titleStyle}>DevOps Intern </h3>
-          <h5 style={placeStyle}>Tekboot Solutions </h5>
+          <h3 style={titleStyle}>Master's degree, Computer Systems Networking and Telecommunications </h3>
+          <h5 style={placeStyle}>National School of Electronics and Telecoms of Sfax </h5>
 
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
-          date="Jun 2023 – Dec 2024     "
+          date="Sep 2017 - Jun 2020     "
           iconStyle={{ background: primaryColor, color: "#fff" }}
           icon={<MdWork />}
           contentStyle={timelineStyle}
         >
-          <h3 style={titleStyle}>System & Network Administrator </h3>
-          <h5 style={placeStyle}>Ministry of Defense </h5>
+          <h3 style={titleStyle}>Engineer's degree, Deck and Naval systems </h3>
+          <h5 style={placeStyle}>Tunisian Naval Academy </h5>
 
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
-          date="Jun 2023 – Dec 2024"
+          date="Sep 2015 - Jun 2017"
           iconStyle={{ background: primaryColor, color: "#fff" }}
           icon={<MdWork />}
           contentStyle={timelineStyle}
         >
-          <h3 style={titleStyle}>Data Engineer Intern </h3>
-          <h5 style={placeStyle}>OliveSoft LAGID </h5>
+          <h3 style={titleStyle}> Preparatory Cycle, Technical Preparatory </h3>
+          <h5 style={placeStyle}>Tunisian Naval Academy </h5>
 
         </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          date="Aug 2022 – May 2023     "
-          iconStyle={{ background: primaryColor, color: "#fff" }}
-          icon={<MdWork />}
-          contentStyle={timelineStyle}
-        >
-          <h3 style={titleStyle}>Director of Maritime Operations </h3>
-          <h5 style={placeStyle}>Ministry of Defense </h5>
 
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          date="Jul 2020 – Jul 2022"
-          iconStyle={{ background: primaryColor, color: "#fff" }}
-          icon={<MdWork />}
-          contentStyle={timelineStyle}
-        >
-          <h3 style={titleStyle}>Deck Officer</h3>
-          <h5 style={placeStyle}>Ministry of Defense </h5>
-
-        </VerticalTimelineElement>
       </VerticalTimeline>
     </div>
   );
