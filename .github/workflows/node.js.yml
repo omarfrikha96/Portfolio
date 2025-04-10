@@ -15,26 +15,26 @@ jobs:
       id-token: write
 
     steps:
-      - name: Checkout source
+      - name: 🧾 Checkout source
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: npm ci --legacy-peer-deps
 
-      - name: Run tests (optional)
+      - name: 🧪 Run tests (optional)
         run: npm run test || echo "No tests yet"
 
-      - name: Lint (optional)
+      - name: 🧹 Lint (optional)
         run: npm run lint || echo "Lint issues detected"
 
       # 🔍 Trivy: Scan for vulnerabilities
-      - name: Trivy Vulnerability Scan (Filesystem + NPM)
+      - name: 🔐 Trivy Vulnerability Scan (Filesystem + NPM)
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: fs
@@ -46,7 +46,7 @@ jobs:
           scan-ref: .
 
       # 🔎 SonarQube analysis
-      - name: SonarQube Scan
+      - name: 🔎 SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
         with:
           args: >
@@ -60,12 +60,12 @@ jobs:
       - name: 🔨 Build the app
         run: npm run build
 
-      - name: Configure Git identity
+      - name: 🔏 Configure Git identity
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Deploy to GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
