@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://omarfrikha96.github.io/Portfolio",
+  "homepage": "https://omarfrikha.tech",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@react-pdf/renderer": "^2.2.0",
