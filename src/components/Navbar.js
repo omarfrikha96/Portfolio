@@ -9,6 +9,9 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineMessage,
+  AiOutlineMenu ,
+   AiOutlineClose
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -43,7 +46,13 @@ function NavBar() {
           onClick={() => {
             updateExpanded(expand ? false : "expanded");
           }}
+          style={{ border: "none", background: "transparent" }}
         >
+          {expand ? (
+            <AiOutlineClose size={40} color="#1FACFF" />
+          ) : (
+            <AiOutlineMenu size={40} color="#1FACFF" />
+          )}
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
@@ -83,6 +92,15 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/contact"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineMessage style={{ marginBottom: "2px" }} /> Contact Me
               </Nav.Link>
             </Nav.Item>
           </Nav>

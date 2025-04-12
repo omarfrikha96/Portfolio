@@ -4,6 +4,8 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 function ProjectCards(props) {
   const [showModal, setShowModal] = useState(false);
@@ -46,6 +48,15 @@ function ProjectCards(props) {
           <Modal.Title>{props.title} - Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+        {props.imgDesc && props.imgDesc.trim() !== "" && (
+        <Zoom>
+          <img
+            src={props.imgDesc}
+            alt="card-img"
+            className="img-fluid mb-3"
+            style={{ borderRadius: "10px" }}
+          />
+        </Zoom>)}
           <ul>
           {props.plus.split("●").map((item, index) =>
               item.trim() !== "" ? <li key={index}>{item.trim()}</li> : null

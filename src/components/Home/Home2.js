@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
-  AiFillFacebook ,
   AiFillInstagram,
+  AiFillMail
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -62,12 +62,12 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.facebook.com/oma.fr.officiel/"
+                  href="mailto:contact@omarfrikha.tech" // Replace with your email
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
-                  <AiFillFacebook  />
+                  <AiFillMail />
                 </a>
               </li>
               <li className="social-icons">

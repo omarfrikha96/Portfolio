@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
-  AiFillFacebook ,
+  AiFillMail ,
   AiFillInstagram,
 
 } from "react-icons/ai";
@@ -34,12 +34,12 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.facebook.com/oma.fr.officiel/"
+                href="mailto:contact@omarfrikha.tech"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                < AiFillFacebook  />
+                < AiFillMail  />
               </a>
             </li>
             <li className="social-icons">
