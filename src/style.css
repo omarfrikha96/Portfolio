@@ -95,7 +95,7 @@ button:focus {
 
 .logo {
   height: 3em !important;
-  width: 5em !important;
+  width: 4em !important;
 }
 
 .navbar-nav .nav-link {
@@ -525,4 +525,10 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+.typewriter-wrapper {
+
+  min-height: 160px;
+
 }
