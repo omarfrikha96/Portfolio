@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.ccaedb61.css",
-    "main.js": "/static/js/main.18161b13.js",
-    "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
-    "static/media/leaf.png": "/static/media/leaf.ff2616f664c8c0ceab91.png",
+    "main.css": "/static/css/main.c4a3201c.css",
+    "main.js": "/static/js/main.df4740a3.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/blog-graph.png": "/static/media/blog-graph.980aff0208324f5fb266.png",
     "static/media/blog.png": "/static/media/blog.58af73c0944f77e1f16f.png",
     "static/media/home-main.png": "/static/media/home-main.e816a0a17310d462193c.png",
-    "static/media/codeEditor.png": "/static/media/codeEditor.1b585492490c8c1cace9.png",
-    "static/media/Omar_Frikha_fr.pdf": "/static/media/Omar_Frikha_fr.70f8aaee969c50443c30.pdf",
-    "static/media/Omar_Frikha_en.pdf": "/static/media/Omar_Frikha_en.93b81c742cfa20e425e1.pdf",
+    "static/media/Omar_Frikha_fr.pdf": "/static/media/Omar_Frikha_fr.63d2b384a158533ae11d.pdf",
+    "static/media/Omar_Frikha_en.pdf": "/static/media/Omar_Frikha_en.eecab208e4f4114a90bc.pdf",
+    "static/media/eksproject-graph.png": "/static/media/eksproject-graph.7bb975999161411f2634.png",
+    "static/media/codeEditor.png": "/static/media/codeEditor.b7598859ccb106b2babc.png",
+    "static/media/eksproject.png": "/static/media/eksproject.6b6741fc2876b0812d41.png",
     "static/media/logo.png": "/static/media/logo.bd619c5763f4ab6ec64e.png",
     "index.html": "/index.html",
-    "main.ccaedb61.css.map": "/static/css/main.ccaedb61.css.map",
-    "main.18161b13.js.map": "/static/js/main.18161b13.js.map",
-    "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
+    "main.c4a3201c.css.map": "/static/css/main.c4a3201c.css.map",
+    "main.df4740a3.js.map": "/static/js/main.df4740a3.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccaedb61.css",
-    "static/js/main.18161b13.js"
+    "static/css/main.c4a3201c.css",
+    "static/js/main.df4740a3.js"
   ]
 }
