@@ -7,7 +7,8 @@ import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import blog from "../../Assets/Projects/blog.png";
 import bloggraph from "../../Assets/Projects/blog-graph.png";
-
+import openai from "../../Assets/Projects/openai.png";
+import chatgraph from "../../Assets/Projects/chatgraph.jpeg";
 
 function Projects() {
   return (
@@ -21,6 +22,7 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+         
           <Col md={4} className="project-card">
           <ProjectCard
               imgPath={chatify}
@@ -58,6 +60,22 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={openai}
+              imgDesc={chatgraph}
+              title="OpenAI Chatbot Deployment on AWS EKS"
+              description="I deployed a custom chatbot using the OpenAI API on an Amazon EKS (Elastic Kubernetes Service) cluster. This project demonstrates how modern cloud-native technologies and AI can come together to create scalable, intelligent applications."
+              ghLink="https://github.com/omarfrikha96/chatbot-ui"
+              plus="
+                    ● CI/CD Pipeline Setup: Automated the process from code checkout to deployment using Jenkins, integrating security scans (OWASP, Trivy), and static analysis via SonarQube.
+                    ● Infrastructure Management: Used Terraform to create and manage the AWS EKS cluster, allowing for seamless infrastructure application and destruction as needed.
+                    ● Deployment: Dockerized the application and deployed it onto the EKS cluster, ensuring scalability and readiness for real-world use cases." 
+            />
+          </Col>
+
+        </Row>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={editor}
               imgDesc=""
               title="Deploy a marketplace application on Azure AKS"
@@ -72,7 +90,8 @@ function Projects() {
                     ● Implementing best practices for security, scalability, and maintainability." 
             />
           </Col>
-          <Col md={4} className="project-card">
+
+        <Col md={4} className="project-card">
             <ProjectCard
               imgPath={eksproject}
               imgDesc={eksprojectgraph}
@@ -88,10 +107,8 @@ function Projects() {
                 
             />
           </Col>
-
-
-
         </Row>
+
       </Container>
     </Container>
   );
