@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.2d3f533c.css",
-    "main.js": "/static/js/main.c060cda7.js",
+    "main.js": "/static/js/main.7e3e69fe.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/blog-graph.png": "/static/media/blog-graph.980aff0208324f5fb266.png",
     "static/media/blog.png": "/static/media/blog.58af73c0944f77e1f16f.png",
-    "static/media/home-main.png": "/static/media/home-main.e816a0a17310d462193c.png",
+    "static/media/home-main.png": "/static/media/home-main.cbda1d4ee344518f42fb.png",
     "static/media/openai.png": "/static/media/openai.dcf81a8dd25b26065672.png",
     "static/media/eksproject-graph.png": "/static/media/eksproject-graph.7bb975999161411f2634.png",
-    "static/media/Omar_Frikha_fr.pdf": "/static/media/Omar_Frikha_fr.b48e3d0443c23d9407fb.pdf",
+    "static/media/Omar_Frikha_fr.pdf": "/static/media/Omar_Frikha_fr.b5473979877866a36f06.pdf",
+    "static/media/Omar_Frikha_en.pdf": "/static/media/Omar_Frikha_en.412f71fb298978649943.pdf",
     "static/media/codeEditor.png": "/static/media/codeEditor.b7598859ccb106b2babc.png",
-    "static/media/Omar_Frikha_en.pdf": "/static/media/Omar_Frikha_en.963c8165d784ad1a7655.pdf",
     "static/media/eksproject.png": "/static/media/eksproject.6b6741fc2876b0812d41.png",
     "static/media/logo.png": "/static/media/logo.bd619c5763f4ab6ec64e.png",
     "static/media/chatgraph.jpeg": "/static/media/chatgraph.0b2fc52c4366402a8caa.jpeg",
     "index.html": "/index.html",
     "main.2d3f533c.css.map": "/static/css/main.2d3f533c.css.map",
-    "main.c060cda7.js.map": "/static/js/main.c060cda7.js.map",
+    "main.7e3e69fe.js.map": "/static/js/main.7e3e69fe.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2d3f533c.css",
-    "static/js/main.c060cda7.js"
+    "static/js/main.7e3e69fe.js"
   ]
 }
