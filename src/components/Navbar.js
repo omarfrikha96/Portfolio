@@ -41,11 +41,7 @@ function Navbar() {
                 </li>
               ))}
             </ul>
-            <div className="nav-cta">
-              <a href="#contact" className="btn btn-primary" onClick={closeMenu}>
-                Free Quote
-              </a>
-            </div>
+
           </div>
 
           <button
