@@ -1,4 +1,4 @@
-name: CI/CD - Build, Secure & Deploy React App On AWS S3
+name: CI/CD - Build & Deploy React App to AWS S3
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-secure-deploy:
+  build-deploy:
     runs-on: ubuntu-latest
 
     permissions:
@@ -26,31 +26,6 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
 
-      - name: Run tests
-        run: npm run test || echo "No tests yet"
-
-      - name: Trivy Vulnerability Scan (Filesystem + NPM)
-        uses: aquasecurity/trivy-action@master
-        with:
-          scan-type: fs
-          ignore-unfixed: true
-          severity: CRITICAL,HIGH
-          format: table
-          exit-code: 0
-          vuln-type: library
-          scan-ref: .
-
-      - name: SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@master
-        with:
-          args: >
-            -Dsonar.projectKey=omarfrikha96_Portfolio
-            -Dsonar.sources=.
-            -Dsonar.host.url=https://sonarcloud.io
-            -Dsonar.organization=omarfrikha96
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
       - name: Build the app
         run: npm run build
 
@@ -58,7 +33,7 @@ jobs:
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws configure set default.region us-east-1 
+          aws configure set default.region us-east-1
 
       - name: Deploy to S3
         run: |

@@ -1,54 +1,57 @@
 import React, { useState, useEffect } from "react";
-import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
+import Hero from "./components/Hero/Hero";
+import Services from "./components/Services/Services";
+import WhyChooseMe from "./components/WhyChooseMe/WhyChooseMe";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Testimonials from "./components/Testimonials/Testimonials";
+import CTASection from "./components/CTA/CTASection";
 import Footer from "./components/Footer";
-import Contact from "./components/Contact/Contact";
-import Resume from "./components/Resume/ResumeNew";
-import "aos/dist/aos.css";
-
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
-} from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 import "./style.css";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 function App() {
-  const [load, upadateLoad] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      upadateLoad(false);
-    }, 1200);
-
+    const timer = setTimeout(() => setLoading(false), 800);
     return () => clearTimeout(timer);
   }, []);
 
+  // Intersection Observer for fade-up animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [loading]);
+
   return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
-        <Footer />
+    <>
+      <div className={`preloader ${!loading ? "loaded" : ""}`}>
+        <div className="preloader-spinner"></div>
       </div>
-    </Router>
+      <div className="App">
+        <Navbar />
+        <Hero />
+        <Services />
+        <WhyChooseMe />
+        <Portfolio />
+        <Testimonials />
+        <CTASection />
+        <Footer />
+        <WhatsAppFloat />
+      </div>
+    </>
   );
 }
 

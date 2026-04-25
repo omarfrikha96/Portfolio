@@ -1,71 +1,64 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
-  AiFillMail ,
+  AiFillMail,
   AiFillInstagram,
-
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
-  let date = new Date();
-  let year = date.getFullYear();
+  const year = new Date().getFullYear();
+
   return (
-    <Container fluid className="footer">
-      <Row>
-        <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by Omar Frikha</h3>
-        </Col>
-        <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} </h3>
-        </Col>
-        <Col md="4" className="footer-body">
-          <ul className="footer-icons">
-            <li className="social-icons">
-              <a
-                href="https://github.com/omarfrikha96"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillGithub />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="mailto:contact@omarfrikha.tech"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                < AiFillMail  />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/omarfr96/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <div className="brand-name">Omar Frikha</div>
+            <p>
+              Professional digital services — design, video editing, marketing
+              & web solutions. Helping businesses grow with powerful digital
+              presence.
+            </p>
+          </div>
+
+          <div className="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-links">
+            <h4>Connect</h4>
+            <div className="footer-social">
+              <a href="https://www.linkedin.com/in/omarfr96/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <FaLinkedinIn />
               </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/oma_fr/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.instagram.com/oma_fr/" target="_blank" rel="noreferrer" aria-label="Instagram">
                 <AiFillInstagram />
               </a>
-            </li>
-          </ul>
-        </Col>
-      </Row>
-    </Container>
+              <a href="https://github.com/omarfrikha96" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <AiFillGithub />
+              </a>
+              <a href="mailto:contact@omarfrikha.tech" aria-label="Email">
+                <AiFillMail />
+              </a>
+              <a href="https://wa.me/21628466944" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                <FaWhatsapp />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          © {year} Omar Frikha. All rights reserved. Crafted with passion in Tunisia 🇹🇳
+        </div>
+      </div>
+    </footer>
   );
 }
 
